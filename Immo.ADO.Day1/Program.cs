@@ -18,15 +18,24 @@ namespace Immo.ADO.Day1
             #endregion
 
             #region MyRegion2
-            //ConnectedCRUD connected = new ConnectedCRUD();
+            ConnectedCRUD connected = new ConnectedCRUD();
             ////connected.GetProductByCategoryId(10);
 
             //connected.CreateNewProduct("P159", "Tata", 1, 900000, 3);
 
-            //connected.Dispose();
+            //connected.GetProductAndCategory();
+
+            //connected.GetMultipleTable();
+
+            //ExecuteScalar
+            connected.UseExecuteScalar();
+
+            connected.Dispose();
+
             #endregion
 
-            DisconnectedCRUD obj= new DisconnectedCRUD();
+            #region Disconnected
+            //DisconnectedCRUD obj = new DisconnectedCRUD();
             //   obj.GetProducts();
 
             ////Insert Product
@@ -43,10 +52,13 @@ namespace Immo.ADO.Day1
             //obj.UpdateProduct("P161", 1);
 
             //Delete Product
-            obj.DeleteProduct("P160");
+            //obj.DeleteProduct("P160");
 
-            Console.WriteLine("----Get Products----\n");
-            obj.GetAllProducts();
+            //Console.WriteLine("----Get Products----\n");
+            //obj.GetAllProducts();
+            #endregion
+
+
         }
     }
 }

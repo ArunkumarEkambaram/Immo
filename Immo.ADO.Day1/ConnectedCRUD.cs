@@ -10,6 +10,11 @@ namespace Immo.ADO.Day1
         private SqlConnection _conn = null;
         private SqlCommand _command = null;
         private SqlDataReader _reader = null;
+
+        public ConnectedCRUD()
+        {
+            _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["QuickCon"].ConnectionString);
+        }
         protected bool Disposed { get; set; } = true;
 
         public void Dispose()
@@ -94,6 +99,63 @@ namespace Immo.ADO.Day1
                         Console.WriteLine("Failed to Creare Procduct");
                     }
                 }
+            }
+        }
+
+        //Multiple Active Result sets
+        public void GetProductAndCategory()
+        {
+            using (_command = new SqlCommand("Select * from Products", _conn))
+            {
+                if (_conn.State == ConnectionState.Closed) _conn.Open();
+                _reader = _command.ExecuteReader();
+                while (_reader.Read())
+                {
+                    Console.WriteLine($"Product Id :{_reader[0]}\tName :{_reader[1]}");
+                }
+            }
+
+            using (_command = new SqlCommand("Select * from Categories", _conn))
+            {
+                if (_conn.State == ConnectionState.Closed) _conn.Open();
+                _reader = _command.ExecuteReader();
+                while (_reader.Read())
+                {
+                    Console.WriteLine($"Category Id :{_reader[0]}\tName :{_reader[1]}");
+                }
+            }
+        }
+
+        //NextResult
+        public void GetMultipleTable()
+        {
+            using (_command = new SqlCommand("Select * from Products; Select * from Categories", _conn))
+            {
+                if (_conn.State == ConnectionState.Closed) _conn.Open();
+                _reader = _command.ExecuteReader();
+                while (_reader.Read())
+                {
+                    Console.WriteLine($"Product Id :{_reader[0]}\tName :{_reader[1]}");
+                }
+                //Read the second table
+                _reader.NextResult();
+                Console.WriteLine("--------------Category Table-----------------");
+                while (_reader.Read())
+                {
+                    Console.WriteLine($"Category Id :{_reader[0]}\tName :{_reader[1]}");
+                }
+            }
+        }
+
+        //Scalar
+        public void UseExecuteScalar()
+        {
+            //using (_command = new SqlCommand("Select * from Products;", _conn))
+            using (_command = new SqlCommand("Select sum(Price) from Products;", _conn))
+            {
+                if (_conn.State == ConnectionState.Closed) _conn.Open();
+                decimal sumOfPrice = (decimal)_command.ExecuteScalar();
+                Console.WriteLine("Total Price :" + sumOfPrice);
             }
         }
     }
