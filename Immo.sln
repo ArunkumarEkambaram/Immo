@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.Day3", "..\Immo.CSharp.Day3\Immo.CSharp.Day3\Immo.CSharp.Day3.csproj", "{EB67A2B3-B97B-4F51-9E48-5DFA45179E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.Day1", "..\Immo.CSharp.Day1\Immo.CSharp.Day1\Immo.CSharp.Day1.csproj", "{39CF23B7-B670-43A6-BF2A-DCAC3CE9B94A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.Day2", "..\Immo.CSharp.Day2\Immo.CSharp.Day2\Immo.CSharp.Day2.csproj", "{47442DFE-3970-4D78-8507-1EE4828EAD19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.Day4", "..\Immo.CSharp.Day4\Immo.CSharp.Day4\Immo.CSharp.Day4.csproj", "{1B218EDC-9801-4F10-8175-7B0904121307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.Day5", "Immo.CSharp.Day5\Immo.CSharp.Day5.csproj", "{B90A297D-3E02-40C3-B27B-1E37F87958F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.CSharp.AsyncExample", "Immo.CSharp.AsyncExample\Immo.CSharp.AsyncExample.csproj", "{18343A44-6AA0-4917-B583-7D1701319B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immo.ADO.Day1", "Immo.ADO.Day1\Immo.ADO.Day1.csproj", "{41E7D347-7DEA-44B2-8ACA-5EB1C1A30F1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB67A2B3-B97B-4F51-9E48-5DFA45179E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB67A2B3-B97B-4F51-9E48-5DFA45179E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB67A2B3-B97B-4F51-9E48-5DFA45179E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB67A2B3-B97B-4F51-9E48-5DFA45179E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39CF23B7-B670-43A6-BF2A-DCAC3CE9B94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CF23B7-B670-43A6-BF2A-DCAC3CE9B94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CF23B7-B670-43A6-BF2A-DCAC3CE9B94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CF23B7-B670-43A6-BF2A-DCAC3CE9B94A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47442DFE-3970-4D78-8507-1EE4828EAD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47442DFE-3970-4D78-8507-1EE4828EAD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47442DFE-3970-4D78-8507-1EE4828EAD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47442DFE-3970-4D78-8507-1EE4828EAD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B218EDC-9801-4F10-8175-7B0904121307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B218EDC-9801-4F10-8175-7B0904121307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B218EDC-9801-4F10-8175-7B0904121307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B218EDC-9801-4F10-8175-7B0904121307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90A297D-3E02-40C3-B27B-1E37F87958F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90A297D-3E02-40C3-B27B-1E37F87958F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90A297D-3E02-40C3-B27B-1E37F87958F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90A297D-3E02-40C3-B27B-1E37F87958F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18343A44-6AA0-4917-B583-7D1701319B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18343A44-6AA0-4917-B583-7D1701319B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18343A44-6AA0-4917-B583-7D1701319B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18343A44-6AA0-4917-B583-7D1701319B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E7D347-7DEA-44B2-8ACA-5EB1C1A30F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E7D347-7DEA-44B2-8ACA-5EB1C1A30F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E7D347-7DEA-44B2-8ACA-5EB1C1A30F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E7D347-7DEA-44B2-8ACA-5EB1C1A30F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
