@@ -20,13 +20,16 @@ namespace Immo.CSharp.Day7
 
             //Console.WriteLine(SimpleSingleton.Counter);
 
-            DbConnectionSingleton con1 = DbConnectionSingleton.Instance;
-            SqlConnection con = con1.GetConnection();
+            //DbConnectionSingleton con1 = DbConnectionSingleton.Instance;
+            //SqlConnection con = con1.GetConnection();
             //if (con.State == System.Data.ConnectionState.Closed)
             //{
             //    con.Open();
             //}
-            con.Close();
+            //  con.Close();
+
+            Employee_SRP obj = new Employee_SRP();
+            obj.GetEmployee();
         }
     }
 }
