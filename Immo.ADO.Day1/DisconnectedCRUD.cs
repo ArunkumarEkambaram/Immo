@@ -33,6 +33,7 @@ namespace Immo.ADO.Day1
             {
                 _adapter1.Fill(_ds, "Category");
             }
+
             return _ds;
         }
 
@@ -60,6 +61,30 @@ namespace Immo.ADO.Day1
             foreach (var product in products)
             {
                 Console.WriteLine($"Id :{product.ProductId}\tName :{product.ProductName}\tPrice :{product.Price}");
+            }
+        }
+
+        //Get Product based on Prices
+        public void GetProduct(decimal fromPrice, decimal toPrice)
+        {
+            var _dt = GetData().Tables["Product"];
+            var products = _dt.AsEnumerable()
+                                       .Select(x => new Product
+                                       {
+                                           ProductId = x.Field<string>("ProductId"),
+                                           ProductName = x.Field<string>("ProductName"),
+                                           Price = x.Field<decimal>("Price")
+                                       })
+                                       .ToList();
+           // var oneProcduct = products.FirstOrDefault(x => x.ProductId == "P101");
+            var finalProduct = products.Where(p => p.Price >= fromPrice && p.Price <= toPrice).OrderBy(x => x.Price);
+
+            //get all products
+            Console.WriteLine($"Product Id\tProduct Name\t\t\t\t\tPrice");
+            Console.WriteLine("------------------------------------------------------------------------------------");
+            foreach (var product in finalProduct)
+            {
+                Console.WriteLine($"{product.ProductId,-10}\t{product.ProductName,-40}\t{product.Price}");
             }
         }
 
@@ -106,6 +131,13 @@ namespace Immo.ADO.Day1
             //    row.Delete();
             //}         
             _adapter.Update(_dt);
+        }
+
+        //Get XML from Dataset
+        public void GetXML()
+        {
+            var ds = GetData();
+            ds.WriteXml("Product.xml");
         }
     }
 }
