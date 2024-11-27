@@ -46,6 +46,8 @@
     <Compile Include="DbConnectionSingleton.cs" />
     <Compile Include="DIExample.cs" />
     <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="ICustomerDetails.cs" />
+    <Compile Include="OCPExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleSingleton.cs" />
@@ -53,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
