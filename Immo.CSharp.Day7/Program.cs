@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 
 namespace Immo.CSharp.Day7
@@ -13,11 +14,19 @@ namespace Immo.CSharp.Day7
             //LogErrorHandler logErrorHandler = new LogErrorHandler(sql);
             //logErrorHandler.DoWork("Runtime Error");
 
-            SimpleSingleton obj1 = SimpleSingleton.Instance;
-            SimpleSingleton obj2 = SimpleSingleton.Instance;
-            SimpleSingleton obj3 = SimpleSingleton.Instance;
+            //SimpleSingleton obj1 = SimpleSingleton.Instance;
+            //SimpleSingleton obj2 = SimpleSingleton.Instance;
+            //SimpleSingleton obj3 = SimpleSingleton.Instance;
 
-            Console.WriteLine(SimpleSingleton.Counter);
+            //Console.WriteLine(SimpleSingleton.Counter);
+
+            DbConnectionSingleton con1 = DbConnectionSingleton.Instance;
+            SqlConnection con = con1.GetConnection();
+            //if (con.State == System.Data.ConnectionState.Closed)
+            //{
+            //    con.Open();
+            //}
+            con.Close();
         }
     }
 }
